@@ -38,7 +38,9 @@ After opening `settings.json`, add this line to keep VS Code lightweight:
 "telemetry.telemetryLevel": "off"
 ```
 
+---
 
+### Current settings
 ```json
 {
     "workbench.colorTheme": "One Dark Pro",
