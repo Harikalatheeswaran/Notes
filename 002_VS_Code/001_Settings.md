@@ -1,3 +1,44 @@
+### Inside VS Code (Recommended – 2 seconds):
+
+1. Press `Ctrl + Shift + P` (Command Palette)
+2. Type:  
+   **Preferences: Open Settings (JSON)**
+3. Press `Enter`
+
+→ This instantly opens your **user** `settings.json` file (the one with all your custom settings).
+
+That’s the official “direct” command Microsoft built for this exact purpose.
+
+### Bonus: One-time keyboard shortcut (make it even faster)
+
+If you want a real hotkey (e.g. `Ctrl + Alt + S`):
+
+1. Open Command Palette → type **Preferences: Open Keyboard Shortcuts**
+2. Search for `Preferences: Open Settings (JSON)`
+3. Click the + icon and assign your shortcut (e.g. `Ctrl+Alt+S`)
+
+### From Terminal / PowerShell / WSL (if you’re outside VS Code)
+
+**Windows (PowerShell or CMD):**
+```powershell
+code "%APPDATA%\Code\User\settings.json"
+```
+
+**WSL / Ubuntu terminal**:
+```bash
+code ~/.config/Code/User/settings.json
+```
+(If you installed VS Code on Windows + Remote-WSL extension, this still works perfectly because `code` command forwards to the Windows version.)
+
+**Quick tip for you (storage-conscious):**  
+After opening `settings.json`, add this line to keep VS Code lightweight:
+```json
+"files.autoSave": "afterDelay",
+"workbench.startupEditor": "none",
+"telemetry.telemetryLevel": "off"
+```
+
+
 ```json
 {
     "workbench.colorTheme": "One Dark Pro",
